@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jEb-fN-eu3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="uwN-Zb-DR3">
+            <objects>
+                <navigationController id="jEb-fN-eu3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rza-kS-tDQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7aK-ih-xje" kind="relationship" relationship="rootViewController" id="OfS-FM-tYJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ila-QI-daG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-552" y="22"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Fsr-hn-UE1">
+            <objects>
+                <viewController id="7aK-ih-xje" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyh-d7-N4x"/>
+                        <viewControllerLayoutGuide type="bottom" id="cm2-iC-p7u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v2i-dX-1Zq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-et-djP">
+                                <rect key="frame" x="96" y="93" width="163" height="59"/>
+                                <color key="backgroundColor" red="1" green="0.80767144097222221" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="YWc-dF-Cfm"/>
+                                </constraints>
+                                <state key="normal" title="断开连接"/>
+                                <connections>
+                                    <action selector="cancelConnect:" destination="7aK-ih-xje" eventType="touchUpInside" id="wrf-eC-vLF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nR-BX-uZC">
+                                <rect key="frame" x="96" y="174" width="163" height="59"/>
+                                <color key="backgroundColor" red="1" green="0.80767144099999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="dOf-CG-GY1"/>
+                                </constraints>
+                                <state key="normal" title="重新连接"/>
+                                <connections>
+                                    <action selector="reConnect:" destination="7aK-ih-xje" eventType="touchUpInside" id="FbW-qO-El5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7nR-BX-uZC" firstAttribute="leading" secondItem="v2i-dX-1Zq" secondAttribute="leadingMargin" constant="80" id="3gw-LN-joc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7nR-BX-uZC" secondAttribute="trailing" constant="100" id="7Cj-Dw-rGC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b3a-et-djP" secondAttribute="trailing" constant="100" id="gOn-bN-Buz"/>
+                            <constraint firstItem="b3a-et-djP" firstAttribute="top" secondItem="jyh-d7-N4x" secondAttribute="bottom" constant="29" id="uB3-yt-jgx"/>
+                            <constraint firstItem="b3a-et-djP" firstAttribute="leading" secondItem="v2i-dX-1Zq" secondAttribute="leadingMargin" constant="80" id="uHF-vf-QZ7"/>
+                            <constraint firstItem="7nR-BX-uZC" firstAttribute="top" secondItem="b3a-et-djP" secondAttribute="bottom" constant="22" id="x5h-eV-reT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tSg-4R-bxb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jic-Tw-CHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400.80000000000001" y="20.239880059970016"/>
+        </scene>
+    </scenes>
+</document>
